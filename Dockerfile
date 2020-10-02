@@ -74,8 +74,8 @@ ENV COMPOSER_VERSION 1.10.13
 #  && composer --ansi --version --no-interaction \
 
 RUN curl -sS https://getcomposer.org/installer | php
-RUN sudo mv composer.phar /usr/local/bin/composer
-RUN sudo chmod +x /usr/local/bin/composer
+RUN mv composer.phar /usr/local/bin/composer
+RUN chmod +x /usr/local/bin/composer
 RUN source ~/.bashrc
 RUN composer -v
 RUN composer global require drush/drush --prefer-dist
