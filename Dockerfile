@@ -110,8 +110,8 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
       opcache \
       pcntl \
       # pdo_mysql \
-      # shmop \
-      # soap \
+      shmop \
+      soap \
       sockets \
       sysvmsg \
       sysvsem \
