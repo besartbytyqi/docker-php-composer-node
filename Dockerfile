@@ -93,32 +93,32 @@ RUN composer global require drush/drush --prefer-dist
 #
 # Install additional php extensions
 #
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
-    && docker-php-ext-install -j$(nproc) \
-      bcmath \
-      bz2 \
-      calendar \
-      exif \
-      ftp \
-      gd \
-      gettext \
-      intl \
-      ldap \
-      mcrypt \
-      mysqli \
-      opcache \
-      pcntl \
-      pdo_mysql \
-      shmop \
-      soap \
-      sockets \
-      sysvmsg \
-      sysvsem \
-      sysvshm \
-      zip \
-    && pecl install redis apcu \
-    && docker-php-ext-enable redis apcu
+# RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+#     && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
+#     && docker-php-ext-install -j$(nproc) \
+#       bcmath \
+#       bz2 \
+#       calendar \
+#       exif \
+#       ftp \
+#       gd \
+#       gettext \
+#       intl \
+#       ldap \
+#       mcrypt \
+#       mysqli \
+#       opcache \
+#       pcntl \
+#       pdo_mysql \
+#       shmop \
+#       soap \
+#       sockets \
+#       sysvmsg \
+#       sysvsem \
+#       sysvshm \
+#       zip \
+#     && pecl install redis apcu \
+#     && docker-php-ext-enable redis apcu
 
 #
 # PHP xdebug for phpunit code coverage report
@@ -154,7 +154,7 @@ RUN a2enmod rewrite headers expires ssl \
 #
 # Python: mkdocs
 #
-RUN pip install mkdocs
+# RUN pip install mkdocs
 
 
 COPY test.sh /test.sh
