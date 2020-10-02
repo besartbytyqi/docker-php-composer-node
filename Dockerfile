@@ -48,7 +48,10 @@ RUN apt-get update \
 
 # Install nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
-RUN nvm -v
+RUN nvm --version
+RUN nvm install 8
+RUN node -v
+RUN npm -v
 #
 # Install Composer and Drush
 #
