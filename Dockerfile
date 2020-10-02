@@ -97,15 +97,15 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
     && docker-php-ext-install -j$(nproc) \
       bcmath \
-      # bz2 \
-      # calendar \
-      # exif \
-      # ftp \
-      # gd \
-      # gettext \
-      # intl \
-      # ldap \
-      # mcrypt \
+      bz2 \
+      calendar \
+      exif \
+      ftp \
+      gd \
+      gettext \
+      intl \
+      ldap \
+      mcrypt \
       # mysqli \
       # opcache \
       # pcntl \
