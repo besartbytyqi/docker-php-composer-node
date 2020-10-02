@@ -46,7 +46,7 @@ RUN apt-get update \
 # RUN apt-get update \
 #  && apt-get install -y \
 #  nodejs
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
 #
 # Install Composer and Drush
