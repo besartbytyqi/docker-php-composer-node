@@ -107,8 +107,8 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
       ldap \
       # mcrypt \
       mysqli \
-      # opcache \
-      # pcntl \
+      opcache \
+      pcntl \
       # pdo_mysql \
       # shmop \
       # soap \
