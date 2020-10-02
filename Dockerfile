@@ -76,7 +76,7 @@ ENV COMPOSER_VERSION 1.10.13
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
-RUN source ~/.bashrc
+# RUN source ~/.bashrc
 RUN composer -v
 RUN composer global require drush/drush --prefer-dist
 
@@ -84,10 +84,10 @@ RUN composer global require drush/drush --prefer-dist
 #
 # WP-CLI
 #
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-RUN php wp-cli.phar --info --allow-root
-RUN chmod +x wp-cli.phar
-RUN mv wp-cli.phar /usr/local/bin/wp
+# RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+# RUN php wp-cli.phar --info --allow-root
+# RUN chmod +x wp-cli.phar
+# RUN mv wp-cli.phar /usr/local/bin/wp
 
 
 #
