@@ -1,6 +1,6 @@
 # ./Dockerfile
 
-FROM php:7.4-apache
+FROM php:7.3-apache
 MAINTAINER Andrew Whalen <github@amwhalen.com>
 
 ENV APACHE_DOCROOT /var/www/html/web
