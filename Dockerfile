@@ -112,11 +112,11 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
       # pdo_mysql \
       # shmop \
       # soap \
-      # sockets \
-      # sysvmsg \
-      # sysvsem \
-      # sysvshm \
-      # zip \
+      sockets \
+      sysvmsg \
+      sysvsem \
+      sysvshm \
+      zip \
     && pecl install redis apcu \
     && docker-php-ext-enable redis apcu
 
