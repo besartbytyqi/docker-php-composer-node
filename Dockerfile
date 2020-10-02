@@ -22,7 +22,7 @@ RUN apt-get update \
  bzip2 \
  libbz2-dev \
  zlib1g-dev \
- mysql-client \
+ default-mysql-client \
  libfontconfig \
  libfreetype6-dev \
  libjpeg62-turbo-dev \
