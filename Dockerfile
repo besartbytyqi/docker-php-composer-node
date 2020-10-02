@@ -154,7 +154,7 @@ RUN a2enmod rewrite headers expires ssl \
 #
 # Python: mkdocs
 #
-# RUN pip install mkdocs
+RUN pip install mkdocs
 
 
 COPY test.sh /test.sh
