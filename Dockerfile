@@ -32,6 +32,7 @@ RUN apt-get update \
  libmcrypt-dev \
  python-pip \
  fabric \
+ rsync \
  jq \
  gnupg \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
