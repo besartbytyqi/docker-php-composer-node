@@ -42,10 +42,11 @@ RUN apt-get update \
 # Install Node (with NPM), and Yarn (via package manager for Debian)
 #
 # https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
-RUN apt-get update \
- && apt-get install -y \
- nodejs
+# RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+# RUN apt-get update \
+#  && apt-get install -y \
+#  nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
 #
 # Install Composer and Drush
@@ -53,7 +54,7 @@ RUN apt-get update \
 ENV PATH "/composer/vendor/bin:$PATH"
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
-ENV COMPOSER_VERSION 1.5.2
+ENV COMPOSER_VERSION 1.10.13
 
 RUN curl -s -f -L -o /tmp/installer.php https://raw.githubusercontent.com/composer/getcomposer.org/da290238de6d63faace0343efbdd5aa9354332c5/web/installer \
  && php -r " \
